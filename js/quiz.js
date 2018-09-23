@@ -26,10 +26,10 @@ var quizapp = new Vue({
 		checkAnswer: function (index) {
 			this.clickedIndex = index;//save it for coloring the options
 			self = this;
+			this.feedback = true;
 			$.getJSON("http://www.leeuwdesign.nl/quiz/backend/quiz.php",{ action: "checkAnswer", id: this.quizdata[this.questionNum].id, givenAnswer: index }, function(json) {
 				self.rightAnswer = json.rightAnswer;
 				if(json.correct == "true") {
-					self.feedback = true;
 					self.answerIsRight = true;
 					self.score++;	
 				}		
