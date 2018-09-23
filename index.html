@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Quiz Staatkunde</title>
+		<link href="stylesheets/basic.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="quizapp" v-cloak>
+			<transition name="fade">
+				<div id="right-answer-feedback" v-show="answerIsRight"></div>
+			</transition>
+			<span id="question-field" v-show="!completed">{{quizdata[questionNum].question}}</span>
+			<div id="option-container">
+				<ul id="option-list" v-show="!completed">
+					<li v-for="(item, index) in splitOptions" v-on:click="checkAnswer(index)" v-bind:class="colorOptions(index)">
+						{{ item }}
+					</li>
+				</ul>
+				<transition name="fade" v-if="show" v-show="!completed">
+					<img id="quiz-photo" :src="`photo/${quizdata[questionNum].image}`"/>
+				</transition>
+				<div id="end-screen" v-show="completed">
+					<span id="feedback-field" v-show="!submitted">Vul je naam in:</span>
+					<input type="text" id="username-field" v-show="!submitted" v-on:keyup.enter="submitScore"><br>
+					<div id="submit-button"  v-on:click="submitScore" v-show="!submitted"></div>
+					<ul id="score-list" v-show="submitted">
+						<li v-for="(item, index) in scores">
+							 <span class="score-item">{{item.name}}</span>{{ item.score }}
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="score-container">
+				<span id="score-field" v-show="!submitted">Score: {{ score }} van de {{numQuestions}}</span>
+				<div id="next-button" v-show="feedback" v-on:click="nextQuestion"></div>
+			</div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="js/quiz.js"></script>
+	</body>
+</html>

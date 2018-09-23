@@ -1,0 +1,170 @@
+/* line 5, ../sass/basic.scss */
+body {
+  font-family: LetterGothicStdBold, Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-image: url("../img/binnenhof.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../sass/basic.scss */
+span {
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+/* line 16, ../sass/basic.scss */
+.prefeedback {
+  background-color: #d3d3d3;
+}
+
+/* line 19, ../sass/basic.scss */
+.rightanswer {
+  background-color: #00FF00;
+}
+
+/* line 22, ../sass/basic.scss */
+.wronganswer {
+  background-color: #FF0000;
+}
+
+/* line 25, ../sass/basic.scss */
+.disabled {
+  pointer-events: none;
+}
+
+/* line 29, ../sass/basic.scss */
+#quizapp {
+  width: 800px;
+  height: 350px;
+  border: 1px solid #808080;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 120px 0 240px #fff,   inset -120px 0 240px #0ff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 41, ../sass/basic.scss */
+#quizapp ul {
+  float: left;
+  margin-top: 30px;
+  width: 530px;
+}
+/* line 46, ../sass/basic.scss */
+#quizapp li {
+  list-style-type: none;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 500px;
+  height: 30px;
+  border: 1px solid #808080;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: black 1px 1px 1px;
+  -webkit-box-shadow: black 1px 1px 1px;
+  box-shadow: black 1px 1px 1px;
+}
+/* line 56, ../sass/basic.scss */
+#quizapp li:hover {
+  background-color: #FFFFFF;
+  -moz-box-shadow: black 2px 2px 2px;
+  -webkit-box-shadow: black 2px 2px 2px;
+  box-shadow: black 2px 2px 2px;
+}
+
+/* line 62, ../sass/basic.scss */
+#option-container {
+  height: 230px;
+}
+
+/* line 65, ../sass/basic.scss */
+#question-field {
+  display: block;
+}
+
+/* line 68, ../sass/basic.scss */
+#feedback-field {
+  display: block;
+}
+
+/* line 71, ../sass/basic.scss */
+#username-field {
+  margin-left: 45px;
+}
+
+/* line 74, ../sass/basic.scss */
+#quiz-photo {
+  float: right;
+  margin-top: 30px;
+  margin-right: 35px;
+  border: 1px solid #808080;
+}
+
+/* line 80, ../sass/basic.scss */
+#score-container {
+  height: 50px;
+}
+
+/* line 83, ../sass/basic.scss */
+#next-button, #submit-button {
+  width: 50px;
+  height: 50px;
+  margin-top: -30px;
+  background-image: url("../img/next-button.png");
+  cursor: pointer;
+  margin-left: 718px;
+}
+/* line 90, ../sass/basic.scss */
+#next-button:hover, #submit-button:hover {
+  background-image: url("../img/next-button-over.png");
+}
+
+/* line 94, ../sass/basic.scss */
+#submit-button {
+  margin-left: 200px;
+}
+
+/* line 98, ../sass/basic.scss */
+#score-list li {
+  pointer-events: none;
+  width: 340px;
+}
+
+/* line 103, ../sass/basic.scss */
+.score-item {
+  float: left;
+  width: 300px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+/* line 109, ../sass/basic.scss */
+#right-answer-feedback {
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/green-flag.png");
+  margin-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 117, ../sass/basic.scss */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s;
+}
+
+/* line 120, ../sass/basic.scss */
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* line 124, ../sass/basic.scss */
+[v-cloak] {
+  display: none;
+}
